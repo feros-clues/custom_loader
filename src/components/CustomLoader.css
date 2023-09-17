@@ -1,0 +1,52 @@
+/* src/components/CustomLoader.css */
+
+/* Styles for the loading overlay */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  z-index: 9999;
+}
+
+/* Styles for the loading content */
+.loader-content {
+  /* Add any additional styles for the loader content here */
+}
+
+/* Styles for the loader dot row */
+.loader-dot-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for each loader dot */
+.loader-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #0a1e33; /* Loader dot color */
+  border-radius: 50%;
+  margin: 0 5px; /* Adjust the margin between dots */
+  animation: loader-bounce 1s infinite alternate; /* Bounce one by one */
+  animation-delay: calc(0.1s * var(--dot-index)); /* Delay each dot */
+}
+
+@keyframes loader-bounce {
+  0%,
+  100% {
+    transform: translateY(
+      0
+    ); /* Start and end position (no vertical movement) */
+  }
+  50% {
+    transform: translateY(-20px); /* Middle position (upward) */
+  }
+}
+
+/* background-color: #0a1e33; Loader dot color */
